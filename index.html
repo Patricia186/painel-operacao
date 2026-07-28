@@ -1,1 +1,160 @@
-<!doctype html><meta charset="utf-8"><title>Operação</title><p>Aguardando primeira publicação.
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta name="robots" content="noindex, nofollow"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="300">
+<title>Operação — Wurfel Advocacia</title>
+<style>
+  :root {
+    --fundo:#0d1117; --painel:#161b22; --borda:#232c38;
+    --texto:#e9eef5; --fraco:#8b97a8;
+    --neutro:#7aa2d6; --andamento:#d9a441; --bom:#3fbf7f; --ruim:#e06a5e;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:2.2vw 2.6vw; background:var(--fundo); color:var(--texto);
+         font:400 1rem/1.35 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         -webkit-font-smoothing:antialiased; }
+  header { display:flex; align-items:baseline; justify-content:space-between;
+           gap:2rem; flex-wrap:wrap; margin-bottom:2.2vw; }
+  h1 { font-size:clamp(1.5rem,2.6vw,2.6rem); margin:0; letter-spacing:-.02em; font-weight:640; }
+  .periodo { color:var(--fraco); font-size:clamp(.85rem,1.15vw,1.15rem); }
+  .relogio { color:var(--fraco); font-size:clamp(.8rem,1vw,1rem); font-variant-numeric:tabular-nums; }
+  .bloco { margin-bottom:2vw; }
+  .bloco h2 { display:flex; align-items:center; gap:.7rem; margin:0 0 .7vw;
+              font-size:clamp(.72rem,.95vw,.95rem); font-weight:600; text-transform:uppercase;
+              letter-spacing:.14em; color:var(--fraco); }
+  .bloco h2::after { content:""; flex:1; height:1px; background:var(--borda); }
+  .bloco h2 b { order:3; font-size:clamp(.9rem,1.2vw,1.2rem); color:var(--texto);
+                font-variant-numeric:tabular-nums; }
+  .cartoes { display:grid; gap:1vw;
+             grid-template-columns:repeat(auto-fit,minmax(clamp(150px,15vw,260px),1fr)); }
+  .cartao { background:var(--painel); border:1px solid var(--borda); border-radius:.7vw;
+            padding:1.2vw 1.4vw; border-left:.35vw solid var(--tom); position:relative; }
+  .bloco.neutro .cartao { --tom:var(--neutro); }
+  .bloco.andamento .cartao { --tom:var(--andamento); }
+  .bloco.bom .cartao { --tom:var(--bom); }
+  .bloco.ruim .cartao { --tom:var(--ruim); }
+  .valor { margin:0; font-size:clamp(2.4rem,5.2vw,5.4rem); font-weight:660; line-height:1;
+           letter-spacing:-.04em; font-variant-numeric:tabular-nums; color:var(--tom); }
+  .rotulo { margin:.5vw 0 0; font-size:clamp(.75rem,1.05vw,1.05rem); color:var(--texto);
+            line-height:1.25; }
+  .hoje { display:inline-block; margin-top:.6vw; font-size:clamp(.68rem,.9vw,.9rem);
+          font-variant-numeric:tabular-nums; color:var(--fundo); background:var(--tom);
+          padding:.15rem .55rem; border-radius:1rem; font-weight:600; }
+  .hoje.vazio { background:transparent; color:var(--fraco); padding-left:0; }
+  .parcial { margin-left:.4rem; font-size:.62em; text-transform:uppercase; letter-spacing:.1em;
+             color:var(--fundo); background:var(--fraco); padding:.1rem .35rem; border-radius:.25rem;
+             vertical-align:middle; }
+  footer { color:var(--fraco); font-size:clamp(.7rem,.9vw,.9rem); border-top:1px solid var(--borda);
+           padding-top:1vw; }
+</style></head><body>
+<div class="tv">
+<header>
+  <div>
+    <h1>Operação — julho de 2026</h1>
+    <p class="periodo">Do dia 1º até agora · marcos concluídos no Advbox</p>
+  </div>
+  <p class="relogio">atualizado às 10:51</p>
+</header>
+
+    <section class="bloco neutro">
+      <h2>Entrada<b>94</b></h2>
+      <div class="cartoes">
+      <article class="cartao neutro">
+        <p class="valor">48</p>
+        <p class="rotulo">Contratos — documentação completa</p>
+        <span class="hoje">+2 hoje</span>
+      </article>
+      <article class="cartao neutro">
+        <p class="valor">46</p>
+        <p class="rotulo">Contratos — com pendência</p>
+        <span class="hoje vazio">—</span>
+      </article></div>
+    </section>
+    <section class="bloco andamento">
+      <h2>Protocolo<b>227</b></h2>
+      <div class="cartoes">
+      <article class="cartao andamento">
+        <p class="valor">55</p>
+        <p class="rotulo">Protocolos administrativos</p>
+        <span class="hoje vazio">—</span>
+      </article>
+      <article class="cartao andamento">
+        <p class="valor">53</p>
+        <p class="rotulo">Distribuições judiciais</p>
+        <span class="hoje">+4 hoje</span>
+      </article>
+      <article class="cartao andamento">
+        <p class="valor">5</p>
+        <p class="rotulo">Recursos administrativos</p>
+        <span class="hoje vazio">—</span>
+      </article>
+      <article class="cartao andamento">
+        <p class="valor">18</p>
+        <p class="rotulo">Recursos judiciais</p>
+        <span class="hoje vazio">—</span>
+      </article>
+      <article class="cartao andamento">
+        <p class="valor">96</p>
+        <p class="rotulo">Peticionamentos judiciais</p>
+        <span class="hoje">+5 hoje</span>
+      </article></div>
+    </section>
+    <section class="bloco bom">
+      <h2>Ganhos<b>74</b></h2>
+      <div class="cartoes">
+      <article class="cartao bom">
+        <p class="valor">31</p>
+        <p class="rotulo">Concedidos no INSS</p>
+        <span class="hoje">+1 hoje</span>
+      </article>
+      <article class="cartao bom">
+        <p class="valor">15</p>
+        <p class="rotulo">Sentenças procedentes</p>
+        <span class="hoje vazio">—</span>
+      </article>
+      <article class="cartao bom">
+        <p class="valor">10</p>
+        <p class="rotulo">Sentenças parcialmente procedentes</p>
+        <span class="hoje">+1 hoje</span>
+      </article>
+      <article class="cartao bom">
+        <p class="valor">18</p>
+        <p class="rotulo">Acordos</p>
+        <span class="hoje vazio">—</span>
+      </article></div>
+    </section>
+    <section class="bloco ruim">
+      <h2>Perdas e encerramentos<b>89</b></h2>
+      <div class="cartoes">
+      <article class="cartao ruim">
+        <p class="valor">62</p>
+        <p class="rotulo">Indeferidos no INSS</p>
+        <span class="hoje">+2 hoje</span>
+      </article>
+      <article class="cartao ruim">
+        <p class="valor">22</p>
+        <p class="rotulo">Sentenças improcedentes</p>
+        <span class="hoje vazio">—</span>
+      </article>
+      <article class="cartao ruim">
+        <p class="valor">3</p>
+        <p class="rotulo">Sentenças de extinção</p>
+        <span class="hoje vazio">—</span>
+      </article>
+      <article class="cartao ruim">
+        <p class="valor">2</p>
+        <p class="rotulo">Arquivados sem direito<span class="parcial" title="medido a partir de hoje">novo</span></p>
+        <span class="hoje">+2 hoje</span>
+      </article>
+      <article class="cartao ruim">
+        <p class="valor">0</p>
+        <p class="rotulo">Arquivados provisoriamente<span class="parcial" title="medido a partir de hoje">novo</span></p>
+        <span class="hoje vazio">—</span>
+      </article></div>
+    </section>
+<footer>Cada número conta o marco no dia em que aconteceu, independente de quando o contrato foi assinado.
+A etiqueta <span class="parcial">novo</span> marca o que passou a ser medido agora: arquivamento não é
+tarefa no Advbox, é etapa, e a etapa só revela movimento a partir da primeira comparação.</footer>
+</div>
+</body></html>
