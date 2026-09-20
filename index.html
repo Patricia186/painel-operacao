@@ -107,7 +107,7 @@
       </span>
     </div>
   </div>
-  <p class="relogio">atualizado às 01:10</p>
+  <p class="relogio">atualizado às 01:28</p>
 </header>
 
     <section class="bloco neutro" data-bloco="Entrada">
@@ -307,8 +307,11 @@ function janela(periodo) {
   }
 }
 
-function aplicar(periodo) {
-  const [inicio, fim, titulo, legenda] = janela(periodo);
+// União dos processos por marco na janela. Precisa repetir a mesma regra do
+// Python: distribuir gera tarefa genérica de protocolo, e no período em que o
+// processo foi distribuído esse protocolo É a distribuição, não uma petição
+// separada. Sem isto, o filtro mostra mais peticionamentos do que o cartão.
+function unir(inicio, fim) {
   const porMarco = new Map();
   for (const dia of dias) {
     if (dia < inicio || dia > fim) continue;
@@ -318,6 +321,17 @@ function aplicar(periodo) {
       for (const p of processos) conjunto.add(p);
     }
   }
+  const distribuidos = porMarco.get("Distribuições judiciais");
+  const peticoes = porMarco.get("Peticionamentos judiciais");
+  if (distribuidos && peticoes) {
+    for (const p of distribuidos) peticoes.delete(p);
+  }
+  return porMarco;
+}
+
+function aplicar(periodo) {
+  const [inicio, fim, titulo, legenda] = janela(periodo);
+  const porMarco = unir(inicio, fim);
 
   for (const cartao of cartoes) {
     const marco = cartao.dataset.marco;
@@ -351,12 +365,15 @@ const dialogo = document.getElementById("lista");
 function abrirLista(marco) {
   if (!PROCESSOS.length) return;
   const [inicio, fim, titulo] = janela(periodoAtual);
+  // Parte do MESMO conjunto que gerou o número do cartão, para a lista nunca
+  // discordar dele — inclusive na regra de distribuição x peticionamento.
+  const doMarco = unir(inicio, fim).get(marco) || new Set();
   const vistos = new Set();
   const linhas = [];
   for (const dia of dias) {
     if (dia < inicio || dia > fim) continue;
     for (const apelido of (INDICE[dia][marco] || [])) {
-      if (vistos.has(apelido)) continue;   // mesmo critério do número: uma vez por processo
+      if (vistos.has(apelido) || !doMarco.has(apelido)) continue;
       vistos.add(apelido);
       linhas.push({dia, p: PROCESSOS[apelido]});
     }
