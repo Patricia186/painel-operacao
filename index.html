@@ -107,7 +107,7 @@
       </span>
     </div>
   </div>
-  <p class="relogio">atualizado às 21:00</p>
+  <p class="relogio">atualizado às 07:00</p>
 </header>
 
     <section class="bloco neutro" data-bloco="Entrada">
@@ -117,7 +117,7 @@
         <span class="lupa">ver processos</span>
         <p class="valor">25</p>
         <p class="rotulo">Contratos — documentação completa</p>
-        <span class="hoje">+4 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao neutro" data-marco="Contratos — com pendência">
         <span class="lupa">ver processos</span>
@@ -133,31 +133,31 @@
         <span class="lupa">ver processos</span>
         <p class="valor">22</p>
         <p class="rotulo">Protocolos administrativos</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao andamento" data-marco="Distribuições judiciais">
         <span class="lupa">ver processos</span>
         <p class="valor">22</p>
         <p class="rotulo">Distribuições judiciais</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao andamento" data-marco="Recursos administrativos">
         <span class="lupa">ver processos</span>
         <p class="valor">2</p>
         <p class="rotulo">Recursos administrativos</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao andamento" data-marco="Recursos judiciais">
         <span class="lupa">ver processos</span>
         <p class="valor">16</p>
         <p class="rotulo">Recursos judiciais</p>
-        <span class="hoje">+4 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao andamento" data-marco="Peticionamentos judiciais">
         <span class="lupa">ver processos</span>
         <p class="valor">66</p>
         <p class="rotulo">Peticionamentos judiciais</p>
-        <span class="hoje">+6 hoje</span>
+        <span class="hoje vazio">—</span>
       </article></div>
     </section>
     <section class="bloco bom" data-bloco="Ganhos">
@@ -167,7 +167,7 @@
         <span class="lupa">ver processos</span>
         <p class="valor">5</p>
         <p class="rotulo">Concedidos no INSS</p>
-        <span class="hoje">+4 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao bom" data-marco="Sentenças procedentes">
         <span class="lupa">ver processos</span>
@@ -195,7 +195,7 @@
         <span class="lupa">ver processos</span>
         <p class="valor">12</p>
         <p class="rotulo">Indeferidos no INSS</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao ruim" data-marco="Sentenças improcedentes">
         <span class="lupa">ver processos</span>
@@ -213,7 +213,7 @@
         <span class="lupa">ver processos</span>
         <p class="valor">21</p>
         <p class="rotulo">Arquivados sem direito</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao ruim" data-marco="Arquivados provisoriamente">
         <span class="lupa">ver processos</span>
@@ -253,7 +253,7 @@ const INDICE = {"2026-01-05":{"Distribui\u00e7\u00f5es judiciais":[0,1,2,3,4],"C
 // Quem é cada processo. Vem VAZIO na versão pública — e é a ausência desta
 // lista que impede a página publicada de mostrar nome de cliente.
 const PROCESSOS = [];
-const HOJE = "2026-10-19";
+const HOJE = "2026-10-20";
 const MESES = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
 const cartoes = [...document.querySelectorAll(".cartao")];
