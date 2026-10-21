@@ -107,7 +107,7 @@
       </span>
     </div>
   </div>
-  <p class="relogio">atualizado às 21:00</p>
+  <p class="relogio">atualizado às 07:00</p>
 </header>
 
     <section class="bloco neutro" data-bloco="Entrada">
@@ -117,13 +117,13 @@
         <span class="lupa">ver processos</span>
         <p class="valor">26</p>
         <p class="rotulo">Contratos — documentação completa</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao neutro" data-marco="Contratos — com pendência">
         <span class="lupa">ver processos</span>
         <p class="valor">6</p>
         <p class="rotulo">Contratos — com pendência</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article></div>
     </section>
     <section class="bloco andamento" data-bloco="Protocolo">
@@ -133,7 +133,7 @@
         <span class="lupa">ver processos</span>
         <p class="valor">26</p>
         <p class="rotulo">Protocolos administrativos</p>
-        <span class="hoje">+4 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao andamento" data-marco="Distribuições judiciais">
         <span class="lupa">ver processos</span>
@@ -157,7 +157,7 @@
         <span class="lupa">ver processos</span>
         <p class="valor">78</p>
         <p class="rotulo">Peticionamentos judiciais</p>
-        <span class="hoje">+13 hoje</span>
+        <span class="hoje vazio">—</span>
       </article></div>
     </section>
     <section class="bloco bom" data-bloco="Ganhos">
@@ -167,13 +167,13 @@
         <span class="lupa">ver processos</span>
         <p class="valor">6</p>
         <p class="rotulo">Concedidos no INSS</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao bom" data-marco="Sentenças procedentes">
         <span class="lupa">ver processos</span>
         <p class="valor">8</p>
         <p class="rotulo">Sentenças procedentes</p>
-        <span class="hoje">+2 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao bom" data-marco="Sentenças parcialmente procedentes">
         <span class="lupa">ver processos</span>
@@ -185,7 +185,7 @@
         <span class="lupa">ver processos</span>
         <p class="valor">9</p>
         <p class="rotulo">Acordos</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article></div>
     </section>
     <section class="bloco ruim" data-bloco="Perdas e encerramentos">
@@ -195,13 +195,13 @@
         <span class="lupa">ver processos</span>
         <p class="valor">16</p>
         <p class="rotulo">Indeferidos no INSS</p>
-        <span class="hoje">+4 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao ruim" data-marco="Sentenças improcedentes">
         <span class="lupa">ver processos</span>
         <p class="valor">17</p>
         <p class="rotulo">Sentenças improcedentes</p>
-        <span class="hoje">+3 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao ruim" data-marco="Sentenças de extinção">
         <span class="lupa">ver processos</span>
@@ -219,7 +219,7 @@
         <span class="lupa">ver processos</span>
         <p class="valor">6</p>
         <p class="rotulo">Arquivados provisoriamente</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article></div>
     </section>
 <footer>Cada número conta o marco no dia em que aconteceu, independente de quando o contrato foi assinado.
@@ -253,7 +253,7 @@ const INDICE = {"2026-01-05":{"Distribui\u00e7\u00f5es judiciais":[0,1,2,3,4],"C
 // Quem é cada processo. Vem VAZIO na versão pública — e é a ausência desta
 // lista que impede a página publicada de mostrar nome de cliente.
 const PROCESSOS = [];
-const HOJE = "2026-10-20";
+const HOJE = "2026-10-21";
 const MESES = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
 const cartoes = [...document.querySelectorAll(".cartao")];
