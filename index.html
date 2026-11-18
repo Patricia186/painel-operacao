@@ -112,7 +112,7 @@
       </span>
     </div>
   </div>
-  <p class="relogio">atualizado às 21:00</p>
+  <p class="relogio">atualizado às 07:00</p>
 </header>
 
     <section class="bloco neutro" data-bloco="Entrada">
@@ -122,7 +122,7 @@
         <span class="lupa">ver processos</span>
         <p class="valor">18</p>
         <p class="rotulo">Contratos — documentação completa</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao neutro" data-marco="Contratos — com pendência">
         <span class="lupa">ver processos</span>
@@ -138,13 +138,13 @@
         <span class="lupa">ver processos</span>
         <p class="valor">21</p>
         <p class="rotulo">Protocolos administrativos</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao andamento" data-marco="Distribuições judiciais">
         <span class="lupa">ver processos</span>
         <p class="valor">21</p>
         <p class="rotulo">Distribuições judiciais</p>
-        <span class="hoje">+1 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao andamento" data-marco="Recursos administrativos">
         <span class="lupa">ver processos</span>
@@ -172,7 +172,7 @@
         <span class="lupa">ver processos</span>
         <p class="valor">11</p>
         <p class="rotulo">Concedidos no INSS</p>
-        <span class="hoje">+2 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao bom" data-marco="Sentenças procedentes">
         <span class="lupa">ver processos</span>
@@ -200,13 +200,13 @@
         <span class="lupa">ver processos</span>
         <p class="valor">19</p>
         <p class="rotulo">Indeferidos no INSS</p>
-        <span class="hoje">+2 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao ruim" data-marco="Sentenças improcedentes">
         <span class="lupa">ver processos</span>
         <p class="valor">19</p>
         <p class="rotulo">Sentenças improcedentes</p>
-        <span class="hoje">+2 hoje</span>
+        <span class="hoje vazio">—</span>
       </article>
       <article class="cartao ruim" data-marco="Sentenças de extinção">
         <span class="lupa">ver processos</span>
@@ -258,7 +258,7 @@ const INDICE = {"2026-01-05":{"Distribui\u00e7\u00f5es judiciais":[0,1,2,3,4],"C
 // Quem é cada processo. Vem VAZIO na versão pública — e é a ausência desta
 // lista que impede a página publicada de mostrar nome de cliente.
 const PROCESSOS = [];
-const HOJE = "2026-11-17";
+const HOJE = "2026-11-18";
 const MESES = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
 const cartoes = [...document.querySelectorAll(".cartao")];
